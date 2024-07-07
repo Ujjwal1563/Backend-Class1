@@ -21,3 +21,7 @@ app.post('/api/cars', (req, res) => {
     res.send("Car Submitted Successfully");
 });
 
+const mongoose= require('mongoose');
+mongoose.connect('mongodb://localhost:27017/Databases', {})
+.then(() => {console.log("Connection Successful");})
+.catch( (error) => {console.log("Received an error");})
